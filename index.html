@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yiwu Express — карго доставка из Иу (Китай) в Казахстан | Выкуп, склад, таможня</title>
+<meta name="description" content="Доставка грузов из Иу и Гуанчжоу в Алматы, Астану и города Казахстана. Выкуп с 1688, Taobao, Alibaba, собственный склад в Иу, консолидация, таможенное оформление под ключ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Golos+Text:wght@400;500;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B1B2B; --ink2:#132A40; --red:#D8262C; --red-d:#B01C21;
+  --gold:#E8A33D; --bg:#FFFFFF; --bg2:#F4F6F9; --line:#E3E8EF;
+  --txt:#22303E; --mut:#5A6470; --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Golos Text',system-ui,sans-serif;color:var(--txt);background:var(--bg);line-height:1.6}
+h1,h2,h3,.disp{font-family:'Unbounded',sans-serif;color:var(--ink);line-height:1.2}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px;cursor:pointer;border:none;transition:.2s}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-d)}
+.btn-ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+section{padding:72px 0}
+.sec-title{font-size:clamp(24px,3.4vw,38px);font-weight:700;margin-bottom:14px}
+.sec-sub{color:var(--mut);max-width:640px;margin-bottom:40px}
+
+/* top bar */
+.topbar{background:var(--ink);color:#cfd9e4;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:8px;padding-bottom:8px;gap:12px}
+.topbar a{color:#fff;font-weight:600}
+.topbar .soc a{margin-left:14px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Unbounded';font-weight:900;font-size:20px;color:var(--ink)}
+.logo .mark{width:38px;height:38px;border-radius:10px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px}
+.logo .mark span{transform:translateY(-1px)}
+.menu{display:flex;gap:26px;font-weight:600;font-size:14.5px}
+.menu a:hover{color:var(--red)}
+.burger{display:none;background:none;border:none;font-size:26px;cursor:pointer;color:var(--ink)}
+@media(max-width:900px){
+  .menu,.nav .btn{display:none}
+  .burger{display:block}
+}
+.mobile-menu{display:none;flex-direction:column;gap:16px;padding:20px;border-top:1px solid var(--line);background:#fff;font-weight:600}
+.mobile-menu.open{display:flex}
+
+/* hero */
+.hero{background:linear-gradient(180deg,#0B1B2B 0%,#132A40 100%);color:#fff;padding:70px 0 0;overflow:hidden;position:relative}
+.hero h1{color:#fff;font-size:clamp(28px,4.2vw,52px);font-weight:900;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{color:#b9c6d4;font-size:17px;max-width:520px;margin-bottom:28px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.hero .btn-ghost{color:#fff;border-color:#ffffff55}
+.hero .btn-ghost:hover{background:#fff;color:var(--ink)}
+
+/* route signature */
+.route{margin:10px 0 34px}
+.route svg{width:100%;max-width:520px;display:block}
+.route .lbl{font-size:12px;font-weight:700;letter-spacing:.08em;fill:#8fa4b8;text-transform:uppercase}
+.route .city{font-size:14px;font-weight:700;fill:#fff}
+.route .dashline{stroke:var(--gold);stroke-width:2.5;stroke-dasharray:7 8;fill:none;animation:dash 2.6s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-60}}
+@media(prefers-reduced-motion:reduce){.route .dashline{animation:none}}
+
+/* stats strip */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ffffff22;border-radius:var(--r) var(--r) 0 0;overflow:hidden;margin-top:20px}
+.stats div{background:#0e2236;padding:22px 18px}
+.stats b{display:block;font-family:'Unbounded';font-size:24px;color:var(--gold)}
+.stats span{font-size:13px;color:#9fb0c0}
+@media(max-width:560px){.stats b{font-size:19px}}
+
+/* calc card */
+.calc{background:#fff;border-radius:var(--r);padding:30px 28px;color:var(--txt);box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.calc h3{font-size:19px;margin-bottom:6px}
+.calc p{font-size:13.5px;color:var(--mut);margin-bottom:18px}
+.calc input{width:100%;padding:14px 16px;margin-bottom:12px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:15px}
+.calc input:focus{outline:none;border-color:var(--red)}
+.calc .btn{width:100%}
+.calc small{display:block;margin-top:12px;font-size:11.5px;color:var(--mut)}
+
+/* services grid */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:980px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:26px 22px;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(11,27,43,.10)}
+.card .ico{font-size:30px;margin-bottom:14px}
+.card h3{font-size:16.5px;margin-bottom:8px}
+.card p{font-size:14px;color:var(--mut)}
+
+/* transport split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-bottom:64px}
+.split:last-child{margin-bottom:0}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+.split .ph{border-radius:var(--r);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:74px;background:linear-gradient(135deg,#132A40,#0B1B2B);color:var(--gold)}
+.split ul{margin:16px 0 22px;padding-left:0;list-style:none}
+.split li{padding-left:26px;position:relative;margin-bottom:9px;font-size:15px}
+.split li::before{content:"";position:absolute;left:0;top:8px;width:14px;height:14px;border-radius:4px;background:var(--red)}
+.tag{display:inline-block;background:#FBE9E9;color:var(--red);font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px;margin-bottom:12px}
+
+/* numbers */
+.numbers{background:var(--ink);color:#fff}
+.numbers .sec-title{color:#fff}
+.numgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:900px){.numgrid{grid-template-columns:repeat(2,1fr)}}
+.numgrid div{border:1px solid #ffffff22;border-radius:var(--r);padding:26px 20px}
+.numgrid b{display:block;font-family:'Unbounded';font-size:32px;color:var(--gold);margin-bottom:6px}
+.numgrid span{font-size:14px;color:#9fb0c0}
+
+/* steps */
+.steps{counter-reset:s}
+.step{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.step:last-child{border:none}
+.step .n{flex:0 0 46px;height:46px;border-radius:50%;background:var(--red);color:#fff;font-family:'Unbounded';font-weight:700;display:flex;align-items:center;justify-content:center}
+.step h3{font-size:17px;margin-bottom:4px}
+.step p{font-size:14.5px;color:var(--mut)}
+
+/* faq */
+details{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:#fff}
+summary{cursor:pointer;padding:18px 20px;font-weight:700;font-size:15.5px;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+summary::after{content:"+";font-family:'Unbounded';color:var(--red);font-size:20px;transition:.2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 20px 18px;font-size:14.5px;color:var(--mut)}
+
+/* reviews */
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.rev{grid-template-columns:1fr}}
+.rev div{background:var(--bg2);border-radius:var(--r);padding:24px;border:1px solid var(--line)}
+.rev b{display:block;color:var(--ink);margin-bottom:4px}
+.rev .st{color:var(--gold);letter-spacing:2px;margin-bottom:10px}
+.rev p{font-size:14.5px;color:var(--mut)}
+
+/* cta band */
+.band{background:linear-gradient(120deg,var(--red),#a5161b);color:#fff;border-radius:var(--r);padding:44px 40px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.band h2{color:#fff;font-size:clamp(20px,2.6vw,30px)}
+.band .btn{background:#fff;color:var(--red)}
+
+/* footer */
+footer{background:var(--ink);color:#9fb0c0;padding:56px 0 28px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:34px;margin-bottom:36px}
+@media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.fgrid{grid-template-columns:1fr}}
+footer h4{color:#fff;font-size:14px;margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em}
+footer a{display:block;margin-bottom:9px}
+footer a:hover{color:#fff}
+.fbottom{border-top:1px solid #ffffff22;padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px}
+
+/* whatsapp float */
+.wa{position:fixed;right:18px;bottom:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div>🇰🇿 <a href="tel:+77000000000">+7 700 000 00 00</a> &nbsp;·&nbsp; 🇨🇳 Иу, склад приёмки</div>
+    <div class="soc">
+      <a href="https://www.instagram.com/yiwu_express" target="_blank">Instagram</a>
+      <a href="https://wa.me/77000000000" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#"><span class="mark"><span>义</span></span>YIWU&nbsp;EXPRESS</a>
+    <nav class="menu">
+      <a href="#services">Услуги</a>
+      <a href="#delivery">Доставка</a>
+      <a href="#steps">Как работаем</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn btn-red" href="#calc">Рассчитать доставку</a>
+    <button class="burger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">☰</button>
+  </div>
+  <nav class="mobile-menu">
+    <a href="#services">Услуги</a>
+    <a href="#delivery">Доставка</a>
+    <a href="#steps">Как работаем</a>
+    <a href="#faq">Вопросы</a>
+    <a href="#contacts">Контакты</a>
+    <a class="btn btn-red" href="#calc">Рассчитать доставку</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" style="color:var(--gold)">Карго из Китая в Казахстан</span>
+      <h1>Доставка грузов <em>из Иу</em> в Алматы и по всему Казахстану</h1>
+      <p class="lead">Выкуп товара с 1688, Taobao и Alibaba, приёмка на собственном складе в Иу, консолидация, страховка и доставка до двери — под ключ.</p>
+      <div class="hero-cta">
+        <a class="btn btn-red" href="#calc">Узнать цену за кг</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/yiwu_express" target="_blank">Видео со склада</a>
+      </div>
+
+      <div class="route" aria-hidden="true">
+        <svg viewBox="0 0 520 110">
+          <path class="dashline" d="M20 70 C 140 20, 260 20, 300 60 S 460 95, 500 55"/>
+          <circle cx="20" cy="70" r="6" fill="#E8A33D"/>
+          <circle cx="300" cy="60" r="5" fill="#ffffff"/>
+          <circle cx="500" cy="55" r="6" fill="#D8262C"/>
+          <text class="city" x="8" y="95">Иу</text>
+          <text class="lbl" x="8" y="108">склад · выкуп</text>
+          <text class="city" x="262" y="88">Хоргос</text>
+          <text class="lbl" x="252" y="101">граница · транзит</text>
+          <text class="city" x="440" y="30">Алматы</text>
+          <text class="lbl" x="418" y="43">выдача · до двери</text>
+        </svg>
+      </div>
+
+      <div class="stats">
+        <div><b>от 1 кг</b><span>минимальная партия</span></div>
+        <div><b>8–15 дней</b><span>авто из Иу до Алматы</span></div>
+        <div><b>от 0,5 $/кг</b><span>плотный груз, авто</span></div>
+      </div>
+    </div>
+
+    <div class="calc" id="calc">
+      <h3>Бесплатный расчёт стоимости</h3>
+      <p>Оставьте параметры груза — менеджер посчитает точную цену и сроки в течение 15 минут.</p>
+      <form onsubmit="event.preventDefault();alert('Заявка принята! Мы свяжемся с вами в ближайшее время.');this.reset()">
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="text" placeholder="Вес, кг / объём, м³" required>
+        <input type="tel" placeholder="Номер телефона (WhatsApp)" required>
+        <button class="btn btn-red" type="submit">Заказать расчёт</button>
+      </form>
+      <small>Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных.</small>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">Каталог услуг</span>
+    <h2 class="sec-title">Всё, что нужно для закупа в Китае</h2>
+    <p class="sec-sub">Работаем как ваш отдел закупок и логистики в Иу: от поиска поставщика до выдачи груза в Казахстане.</p>
+    <div class="cards">
+      <div class="card"><div class="ico">🛒</div><h3>Выкуп товара</h3><p>Оплачиваем поставщикам на 1688, Taobao, Alibaba и на рынке Футянь по выгодному курсу юаня.</p></div>
+      <div class="card"><div class="ico">🏭</div><h3>Склад в Иу</h3><p>Приёмка, взвешивание, фото-отчёт и бесплатное хранение груза до консолидации.</p></div>
+      <div class="card"><div class="ico">📦</div><h3>Проверка и упаковка</h3><p>Пересчёт, проверка на брак, усиленная упаковка: скотч-мешок, уголки, деревянная обрешётка.</p></div>
+      <div class="card"><div class="ico">🛃</div><h3>Таможенное оформление</h3><p>Белая доставка с полным пакетом документов или карго под ключ — на выбор клиента.</p></div>
+      <div class="card"><div class="ico">🔍</div><h3>Поиск поставщика</h3><p>Найдём фабрику под ваш товар, проверим её и договоримся о цене на месте, в Иу.</p></div>
+      <div class="card"><div class="ico">🚚</div><h3>Доставка до двери</h3><p>Выдача в Алматы или отправка любой транспортной компанией в ваш город Казахстана.</p></div>
+      <div class="card"><div class="ico">🛡️</div><h3>Страхование груза</h3><p>Полная материальная ответственность за груз с момента приёмки на складе.</p></div>
+      <div class="card"><div class="ico">📲</div><h3>Трекинг 24/7</h3><p>Статусы по вашему трек-коду и личный менеджер на связи в WhatsApp в любое время.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="delivery" style="background:var(--bg2)">
+  <div class="wrap">
+    <span class="eyebrow">Способы доставки</span>
+    <h2 class="sec-title">Авто, ЖД и авиа из Китая</h2>
+    <p class="sec-sub">Подберём маршрут под ваш груз по соотношению цена / скорость / тип товара.</p>
+
+    <div class="split">
+      <div class="ph">🚛</div>
+      <div>
+        <span class="tag">Самый популярный</span>
+        <h3 class="sec-title" style="font-size:24px">Автодоставка</h3>
+        <p>Оптимальный вариант для сборных грузов и оптовых партий. Машины уходят со склада в Иу несколько раз в неделю через переход Хоргос.</p>
+        <ul>
+          <li>Сроки: 8–15 дней до Алматы</li>
+          <li>Сборный груз от 1 кг или выкуп целой фуры</li>
+          <li>Подходит для одежды, обуви, хозтоваров, электроники</li>
+        </ul>
+        <a class="btn btn-red" href="#calc">Рассчитать авто</a>
+      </div>
+    </div>
+
+    <div class="split">
+      <div>
+        <span class="tag">Для тяжёлых партий</span>
+        <h3 class="sec-title" style="font-size:24px">ЖД и контейнеры</h3>
+        <p>Безопасная и выгодная перевозка крупных объёмов: 20- и 40-футовые контейнеры через Алтынколь с полным документальным сопровождением.</p>
+        <ul>
+          <li>Сроки: 15–25 дней</li>
+          <li>Лучшая цена за кг на объёмах от 10 м³</li>
+          <li>Оборудование, мебель, стройматериалы, станки</li>
+        </ul>
+        <a class="btn btn-red" href="#calc">Рассчитать ЖД</a>
+      </div>
+      <div class="ph">🚆</div>
+    </div>
+
+    <div class="split">
+      <div class="ph">✈️</div>
+      <div>
+        <span class="tag">Максимальная скорость</span>
+        <h3 class="sec-title" style="font-size:24px">Авиадоставка</h3>
+        <p>Когда сроки решают: образцы, срочные партии, ценные и лёгкие товары. Отправка из аэропортов Китая с доставкой до Алматы и Астаны.</p>
+        <ul>
+          <li>Сроки: 3–7 дней</li>
+          <li>Идеально для образцов и мелких ценных грузов</li>
+          <li>Приоритетная обработка на складе</li>
+        </ul>
+        <a class="btn btn-red" href="#calc">Рассчитать авиа</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="numbers">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--gold)">Мы в цифрах</span>
+    <h2 class="sec-title">Почему нам доверяют грузы</h2>
+    <div class="numgrid">
+      <div><b data-n="1500">0</b><span>довольных клиентов из Казахстана</span></div>
+      <div><b data-n="5">0</b><span>лет работаем напрямую из Иу</span></div>
+      <div><b data-n="120">0</b><span>тонн груза отправляем ежемесячно</span></div>
+      <div><b data-n="98">0</b><span>% доставок приходят точно в срок</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="steps">
+  <div class="wrap">
+    <span class="eyebrow">Как мы работаем</span>
+    <h2 class="sec-title">5 шагов от заявки до груза на руках</h2>
+    <div class="steps" style="max-width:760px">
+      <div class="step"><div class="n">1</div><div><h3>Заявка и расчёт</h3><p>Вы присылаете ссылки на товар или параметры груза — мы считаем цену, курс и сроки.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h3>Выкуп и приёмка</h3><p>Оплачиваем поставщику, принимаем груз на складе в Иу, присылаем фото и вес.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h3>Упаковка и консолидация</h3><p>Проверяем на брак, упаковываем и объединяем поставки от разных фабрик в одну отправку.</p></div></div>
+      <div class="step"><div class="n">4</div><div><h3>Доставка и таможня</h3><p>Отправляем выбранным способом, оформляем документы, держим вас в курсе по трекингу.</p></div></div>
+      <div class="step"><div class="n">5</div><div><h3>Выдача груза</h3><p>Получаете груз в Алматы или заказываете доставку до двери в любой город Казахстана.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <span class="eyebrow">Отзывы</span>
+    <h2 class="sec-title">Что говорят клиенты</h2>
+    <div class="rev">
+      <div><b>Асель, Алматы</b><div class="st">★★★★★</div><p>Заказываю одежду с 1688 каждый месяц. Всегда точный вес, фото со склада и груз приходит в срок. Очень удобно, что всё в одном WhatsApp-чате.</p></div>
+      <div><b>Ерлан, Астана</b><div class="st">★★★★★</div><p>Возил оборудование фурой — помогли с фабрикой в Иу, проверили товар до отправки. Сэкономил на посредниках и на курсе юаня.</p></div>
+      <div><b>Динара, Шымкент</b><div class="st">★★★★★</div><p>Первый раз работала с карго — всё объяснили простыми словами, упаковали хрупкий товар в обрешётку, ни одной царапины.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:860px">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="sec-title">Частые вопросы</h2>
+    <details open><summary>Какая минимальная партия?</summary><p>Принимаем грузы от 1 кг. Для сборных грузов действует тариф за кг или за м³ — в зависимости от плотности товара, выбирается более выгодный для вас вариант.</p></details>
+    <details><summary>Как считается цена доставки?</summary><p>Цена зависит от категории товара, плотности груза (кг/м³) и способа доставки. Отправьте параметры в форме расчёта — менеджер пришлёт точный тариф в течение 15 минут.</p></details>
+    <details><summary>Вы можете выкупить товар за меня?</summary><p>Да, это наша основная услуга: вы присылаете ссылку с 1688, Taobao или Alibaba, мы выкупаем товар по актуальному курсу, проверяем и отправляем. Комиссия оговаривается заранее.</p></details>
+    <details><summary>Что если товар придёт с браком?</summary><p>На складе в Иу мы проверяем товар до отправки и присылаем фото. Если брак обнаружен — решаем вопрос с поставщиком до того, как груз уйдёт в Казахстан.</p></details>
+    <details><summary>Нужна ли белая доставка с документами?</summary><p>Работаем в обоих форматах: карго под ключ или официальный импорт с таможенным оформлением, сертификатами и полным пакетом документов для маркетплейсов.</p></details>
+    <details><summary>Где я получу свой груз?</summary><p>Выдача в Алматы со склада, либо отправляем любой транспортной компанией в ваш город: Астана, Шымкент, Караганда, Актобе и другие.</p></details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h2>Готовы посчитать вашу первую доставку?</h2>
+        <p style="opacity:.9;margin-top:6px">Ответим в WhatsApp в течение 15 минут — с ценой, сроками и курсом юаня на сегодня.</p>
+      </div>
+      <a class="btn" href="https://wa.me/77000000000?text=Здравствуйте!%20Хочу%20рассчитать%20доставку%20из%20Иу" target="_blank">Написать в WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer id="contacts">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="logo" style="color:#fff;margin-bottom:14px" href="#"><span class="mark"><span>义</span></span>YIWU&nbsp;EXPRESS</a>
+        <p>Карго доставка и выкуп товаров из Иу (Китай) в Казахстан. Собственный склад, консолидация, таможенное оформление под ключ.</p>
+      </div>
+      <div>
+        <h4>Услуги</h4>
+        <a href="#services">Выкуп с 1688 / Taobao</a>
+        <a href="#delivery">Автодоставка</a>
+        <a href="#delivery">ЖД и контейнеры</a>
+        <a href="#delivery">Авиадоставка</a>
+        <a href="#services">Таможенное оформление</a>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <a href="#steps">Как мы работаем</a>
+        <a href="#faq">Частые вопросы</a>
+        <a href="#calc">Расчёт стоимости</a>
+        <a href="https://www.instagram.com/yiwu_express" target="_blank">Instagram</a>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <a href="tel:+77000000000">🇰🇿 +7 700 000 00 00</a>
+        <a href="https://wa.me/77000000000">WhatsApp: написать менеджеру</a>
+        <p style="margin-top:10px">Склад в Иу: Zhejiang, Jinhua, Yiwu<br>(адрес приёмки выдаётся после заявки)</p>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span>© 2026 Yiwu Express. Все права защищены.</span>
+      <span><a href="#" style="display:inline">Политика конфиденциальности</a> · <a href="#" style="display:inline">Публичная оферта</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/77000000000?text=Здравствуйте!%20Пишу%20с%20сайта%20Yiwu%20Express" target="_blank" aria-label="WhatsApp">💬</a>
+
+<script>
+// анимация счётчиков
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.n,t0=performance.now();
+const step=t=>{const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(end*p)+(p===1?"+":"");if(p<1)requestAnimationFrame(step)};
+requestAnimationFrame(step);io.unobserve(el)})},{threshold:.4});
+document.querySelectorAll('[data-n]').forEach(el=>io.observe(el));
+// закрытие мобильного меню по клику
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.onclick=()=>document.querySelector('.mobile-menu').classList.remove('open'));
+</script>
+</body>
+</html>
